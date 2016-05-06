@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Traveler | Hotel</title>
+    
+    <!-- core CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" >
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" >
+    <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/prettyPhoto.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+</head><!--/head-->
+
+<body class="homepage">
+    <section id="main-slider" class="no-margin">
+        <div class="carousel slide">
+            <div class="carousel-inner">
+                <div class="item active" style="background-image: url(static/images/bg.jpg);height:300px">
+                </div><!--/.item-->
+            </div><!--/.carousel-inner-->
+        </div><!--/.carousel-->
+        <div class = "container">
+            <h1 style="fond-size:30px; color: black">Sheraton New York Time Square Hotel</h1>
+            <h3>4417 Reviews | Time Square, New York, NY</h3>
+        </div>
+    </section><!--/#main-slider-->
+
+    <section>
+        <div class="row">
+            <div class="col-sm-9 wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;">
+                <div class="widget tags" style="margin-left: 50px">
+                    <h3>Read Reviews that mentions</h3>
+                    <ul class="tag-cloud">
+                        <li><a class="btn btn-xs btn-primary" href="#">time square</a></li>
+                        <li><a class="btn btn-xs btn-primary" href="#">downtown area</a></li>
+                        <li><a class="btn btn-xs btn-primary" href="#">cruise port</a></li>
+                        <li><a class="btn btn-xs btn-primary" href="#">quite room</a></li>
+                        <li><a class="btn btn-xs btn-primary" href="#">perfect location</a></li>
+                        <li><a class="btn btn-xs btn-primary" href="#">wonderful hotel</a></li>
+                        <li><a class="btn btn-xs btn-primary" href="#">broadway shows</a></li>
+                        <li><a class="btn btn-xs btn-primary" href="#">bagels</a></li>
+                        <li><a class="btn btn-xs btn-primary" href="#">wine and cheese</a></li>
+                        <li><a class="btn btn-xs btn-primary" href="#">mini suite</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-3 wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;">
+                <div class="widget search" style="margin-top: 50px;margin-right: 30px">
+                    <form role="form">
+                            <input type="text" class="form-control search_box" autocomplete="off" placeholder="Search Here">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="middle" style="margin-top:30px;margin-left:30px;margin-right:30px">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;">
+                    <div class="skill">
+                        <h2>Traveler Ratings</h2>
+                        <div class="progress-wrap">
+                            <h3>cleanliness</h3>
+                            <div class="progress">
+                              <div class="progress-bar  color1" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 85%">
+                                <span class="bar-width">85%</span>
+                              </div>
+
+                            </div>
+                        </div>
+
+                        <div class="progress-wrap">
+                            <h3>service</h3>
+                            <div class="progress">
+                              <div class="progress-bar color2" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 95%">
+                               <span class="bar-width">95%</span>
+                              </div>
+                            </div>
+                        </div>
+
+                        <div class="progress-wrap">
+                            <h3>value</h3>
+                            <div class="progress">
+                              <div class="progress-bar color3" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                <span class="bar-width">80%</span>
+                              </div>
+                            </div>
+                        </div>
+
+                        <div class="progress-wrap">
+                            <h3>location</h3>
+                            <div class="progress">
+                              <div class="progress-bar color4" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
+                                <span class="bar-width">90%</span>
+                              </div>
+                            </div>
+                        </div>
+
+                        <div class="progress-wrap">
+                            <h3>sleep quality</h3>
+                            <div class="progress">
+                              <div class="progress-bar color5" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                <span class="bar-width">80%</span>
+                              </div>
+                            </div>
+                        </div>
+
+                        <div class="progress-wrap">
+                            <h3>room</h3>
+                            <div class="progress">
+                              <div class="progress-bar color6" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
+                                <span class="bar-width">90%</span>
+                              </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div><!--/.col-sm-6-->
+
+                <div class="col-sm-9 wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;">
+                    <div class="accordion">
+                        <h2>Related Reviews</h2>
+                        <div class="panel-group" id="accordion1">
+                          <div class="panel panel-default">
+                            <div class="panel-heading active">
+                              <h3 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne1">
+                                  The room is very clean!
+                                  <i class="fa fa-angle-right pull-right"></i>
+                                </a>
+                              </h3>
+                            </div>
+
+                            <div id="collapseOne1" class="panel-collapse collapse in">
+                              <div class="panel-body">
+                                  <div class="media accordion-inner">
+                                        <div class="pull-left">
+                                            <img class="img-responsive" src="static/images/user3.jpeg">
+                                        </div>
+                                        <div class="media-body">
+                                             <h4>Author/Date</h4>
+                                             <p>this hotel has a great atmosphere starting with a great lobby (particularly liked the lighting display at night) and wonderful views from our room of the skyline and bay.</p>
+                                        </div>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h3 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseTwo1">
+                                  Fantasy stay and great location
+                                  <i class="fa fa-angle-right pull-right"></i>
+                                </a>
+                              </h3>
+                            </div>
+                            <div id="collapseTwo1" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor.
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h3 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseThree1">
+                                  Super Hotel
+                                  <i class="fa fa-angle-right pull-right"></i>
+                                </a>
+                              </h3>
+                            </div>
+                            <div id="collapseThree1" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor.
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h3 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseFour1">
+                                  Have a really good sleep here
+                                  <i class="fa fa-angle-right pull-right"></i>
+                                </a>
+                              </h3>
+                            </div>
+                            <div id="collapseFour1" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor.
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h3 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseThree1">
+                                  Best location in downtown
+                                  <i class="fa fa-angle-right pull-right"></i>
+                                </a>
+                              </h3>
+                            </div>
+                            <div id="collapseThree1" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor.
+                              </div>
+                            </div>
+                          </div>
+                        </div><!--/#accordion1-->
+                    </div>
+                </div>
+
+            </div><!--/.row-->
+        </div><!--/.container-->
+    </section>
+
+
+    <script src="{% static 'js/jquery.prettyPhoto.js' %}"></script>
+    <script src="{% static 'js/jquery.isotope.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/wow.min.js' %}"></script>
+    <script scr="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</body>
+</html>
