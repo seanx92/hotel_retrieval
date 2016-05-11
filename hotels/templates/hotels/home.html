@@ -49,7 +49,7 @@
         </div><!--/.carousel-->
     </section><!--/#main-slider-->
 
-<!--     <section id="recent-works" style="padding: 70px 0;">
+    <section id="recent-works" style="padding: 70px 0;">
         <div class="container">
             <div class="center wow fadeInDown">
                 <h2>Top Rated Hotels Near You</h2>
@@ -61,8 +61,8 @@
                         <img class="img-responsive" src="static/images/item1.jpg" alt="">
                         <div class="overlay">
                             <div class="recent-work-inner">
-                                <h3><a href="#">Hilton Garden Inn Boston/Waltham</a> </h3>
-                                <p>450 Totten Pond Road, Waltham, MA 02451</p>
+                                <h3><a href="#"></a>Las Vegas </h3>
+                                <p></p>
                                 <a class="preview" href="static/images/item1.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
                             </div> 
                         </div>
@@ -161,13 +161,14 @@
                 </div>   
             </div>
         </div>
-    </section> -->
+    </section>
 
     <section id="result", style="padding: 50px 0;">
         
     </section>
 
     <script>
+    var hotel;
     $("#submit-button").on("click", function(e){
         e.preventDefault();
         $.ajax({
@@ -180,7 +181,11 @@
                 'tags': $("#tags").val() // from form
             },
             success: function(data) {
+                hotel = data;
+                index = 0;
                 data.forEach(function(e) {
+                    console.log(e)
+                    var address = e[1]["address"]
                 $("#result").append(
                 '<div class="container">' +
                     '<div class="row">' +
@@ -190,12 +195,12 @@
                                      '<div class="tab-pane fade active in">' +
                                         '<div class="media">' +
                                            '<div class="pull-left">' +
-                                                '<img style="height:230px; width:320px;" src=' + e[1]["image"] + '>' +
+                                                '<img style="height:230px; width:230px;" src=' + e[1]["image"] + '>' +
                                             '</div>' +
                                             '<div class="media-body">' +
-                                                 '<h2>' + e[1]["name"]+ '</h2>' + 
-                                                 '<p>' + e[1]["address"] +
-                                                 '</p>' +
+                                                 '<h2><a class = "hotel_detail", id = "' + index + '">' + e[1]["name"]+ '</a></h2>' + 
+                                                 '<p>' + e[1]["address"]["street_address"] + '</p>' +
+                                                 '<p>' + e[1]["address"]["locality"] + ' | ' + e[1]["address"]["region"] + '</p>' + 
                                             '</div>' + 
                                         '</div>' +
                                      '</div>' +
@@ -205,14 +210,13 @@
 
                         '<div class="col-xs-12 col-sm-4 wow fadeInDown">' + 
                             '<div class="testimonial">' +
-                                '<h2>Reviews</h2>' +
                                  '<div class="media testimonial-inner">' +
                                     '<div class="pull-left">' +
-                                        '<img class="img-circle" src="static/images/user3.jpeg">' +
+                                        '<img class="img-circle" src="static/images/user' + index + '.jpeg">' +
                                     '</div>' +
                                     '<div class="media-body">' + 
-                                        '<h3><strong>' + "Amazing free breakfast and great location" + '</strong></h3>' + 
-                                        '<p>' + "This hotel was very clean and the staff was friendly. Our kids loved the free breakfast and free snacks on the premium floor.In addition, the swimming pool and hot tub were empty while we were there which was nice." + '</p>' +
+                                        '<h3><strong>' + e[1]["reviews"][0]["title"] + '</strong></h3>' + 
+                                        '<p>' + e[1]["reviews"][0]["content"].split('.')[0] + '</p>' +
                                     '</div>' +
                                  '</div>' +
                             '</div>' +
@@ -220,10 +224,19 @@
                     '</div>' +
                 '</div>'
                 );
+                index += 1;
                 });
             }
         });
     });
+
+    $("#result").on("click", ".hotel_detail", function(e){
+      var index = e.target.getAttribute("id");
+      var id = hotel[index][0];
+      window.open("/hotel_id/" + id + "/");
+      console.log(hotel[index])
+    });
+    
 
     </script>
 
